@@ -6,7 +6,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class AccionesMenu {
-
     public boolean GuardarCita(Citas CitaNueva) throws FileNotFoundException {
         ArrayList<Citas> ListCitas = CargarCitas();
         StringBuilder sb;
@@ -282,6 +281,4 @@ public class AccionesMenu {
             }
         }return ListaPaciente;
     }
-
-
 }
