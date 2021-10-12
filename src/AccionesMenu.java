@@ -121,6 +121,18 @@ public class AccionesMenu {
             }
         }return ListCitas;
     }
+    public Citas CargarCitaByID(int CitasID){
+        ArrayList<Citas> ListCitas = CargarCitas();
+        Citas citas = new Citas();
+
+        for(Citas cit: ListCitas){
+            if(cit.getIdCita() == CitasID){
+                return cit;
+            }
+        }
+        citas.setIdCita(0);
+        return citas;
+    }
 
     public boolean GuardarDoctores(Doctor DoctorNuevo) {
         ArrayList<Doctor> ListDoctores = CargarDoctores();
@@ -204,6 +216,19 @@ public class AccionesMenu {
             }
         }return ListaDoctores;
     }
+    public Doctor CargarDoctorByID(int idDoctor){
+        ArrayList<Doctor> ListDoctor = CargarDoctores();
+        Doctor doctor = new Doctor();
+
+        for(Doctor doc: ListDoctor){
+            if(doc.getIdDoctor() == idDoctor){
+                return doc;
+            }
+        }
+        doctor.setIdDoctor(0);
+        return doctor;
+    }
+
 
     public boolean GuardarPaciente(Paciente PacienteNuevo) throws IOException {
         ArrayList<Paciente> ListPaciente = CargarPaciente();
@@ -281,4 +306,18 @@ public class AccionesMenu {
             }
         }return ListaPaciente;
     }
+    public Paciente CargarPacienteByID(int idPaciente){
+        ArrayList<Paciente> ListPaciente = CargarPaciente();
+        Paciente paciente = new Paciente();
+
+        for(Paciente pacie: ListPaciente){
+            if(pacie.getIdPaciente() == idPaciente){
+                return pacie;
+            }
+        }
+        paciente.setIdPaciente(0);
+        return paciente;
+    }
+
+
 }
